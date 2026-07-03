@@ -9,6 +9,7 @@ import ToastStack from "./components/ToastStack";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { useToast } from "./hooks/useToast";
 import "./App.css";
+import Footer from "./components/Footer";
 
 const MILESTONES = [25, 50, 75, 100];
 
@@ -17,7 +18,7 @@ function App() {
   const { toasts, notify } = useToast();
   const reached = useRef<Set<number>>(new Set());
 
-  // Theo dõi hành vi cuộn trang: báo khi người dùng đi qua các mốc 25/50/75/100%
+  //Theo dõi hành vi cuộn trang
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -45,11 +46,7 @@ function App() {
         <Specs />
         <Newsletter onSubmitted={() => notify("Đăng ký nhận tin thành công")} />
       </main>
-      <footer className="bg-slate-900 dark:bg-black text-slate-300 py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p>© 2026 PlayStation 5 - Trang demo. Không phải trang chính thức của Sony.</p>
-        </div>
-      </footer>
+        <Footer/>
       <ToastStack toasts={toasts} />
     </div>
   );

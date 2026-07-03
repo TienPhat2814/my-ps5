@@ -2,9 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Mail, CheckCircle2, Loader2 } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
-// Thay bằng URL webhook thật của bạn (vd: tạo miễn phí tại https://webhook.site)
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL as string | undefined;
-
 interface NewsletterProps {
   onSubmitted: () => void;
 }

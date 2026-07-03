@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-/** Quản lý Dark Mode: đọc lựa chọn hệ thống lần đầu, sau đó cho phép bật/tắt thủ công. */
+/* Quản lý Dark Mode: đọc lựa chọn hệ thống lần đầu, sau đó cho phép bật và tắt thủ công */
 export function useDarkMode() {
   const [isDark, setIsDark] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;

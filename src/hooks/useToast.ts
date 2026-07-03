@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-
 export interface ToastItem {
   id: number;
   message: string;
@@ -7,7 +6,7 @@ export interface ToastItem {
 
 let nextId = 0;
 
-/** Quản lý danh sách toast, dùng để hiển thị thông báo khi theo dõi hành vi người dùng. */
+/* Quản lý danh sách toast, dùng để hiển thị thông báo khi theo dõi hành vi người dùng */
 export function useToast() {
   const [toasts, setToasts] = useState<ToastItem[]>([]);
 

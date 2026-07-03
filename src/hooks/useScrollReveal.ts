@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-
 interface ScrollRevealOptions {
   threshold?: number;
   rootMargin?: string;
 }
 
-/** Fade-up khi phần tử cuộn tới trong khung nhìn (chạy 1 lần). */
+/* Tạo chuyển động mượt khi phần tử cuộn tới trong khung nhìn */
 export function useScrollReveal<T extends HTMLElement>(
   options: ScrollRevealOptions = {}
 ) {
